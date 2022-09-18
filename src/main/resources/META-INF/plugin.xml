@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
   <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-  <id>org.mineejo.avi.avi</id>
+  <id>mineejo.avi</id>
 
   <!-- Public plugin name should be written in Title Case.
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
@@ -22,18 +22,15 @@
   <!-- Extension points defined by the plugin.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
   <extensions defaultExtensionNs="com.intellij">
-    <projectService serviceImplementation="org.mineejo.avi.settings.ProjectSettingsState"/>
+    <postStartupActivity implementation="com.github.mineejo.avi.Initialize"/>
+
+    <projectService serviceImplementation="com.github.mineejo.avi.settings.ProjectSettingsState"/>
 
     <projectConfigurable
       parentId="editor"
-      instance="org.mineejo.avi.settings.ProjectSettingsConfigurable"
-      id="org.mineejo.avi.settings.ProjectSettingsConfigurable"
+      instance="com.github.mineejo.avi.settings.ProjectSettingsConfigurable"
+      id="com.github.mineejo.avi.settings.ProjectSettingsConfigurable"
       displayName="Adaptive Visual Interaction"
       nonDefaultProject="true"/>
   </extensions>
-
-  <actions>
-    <action id="org.mineejo.avi.avi.Main" class="org.mineejo.avi.avi.Main" text="MainDialog"
-            description="Main dialog with text"/>
-  </actions>
 </idea-plugin>

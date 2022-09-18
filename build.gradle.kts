@@ -4,7 +4,7 @@ plugins {
     id("org.jetbrains.intellij") version "1.8.0"
 }
 
-group = "org.mineejo.avi"
+group = "mineejo.avi"
 version = "1.0-SNAPSHOT"
 
 repositories {

@@ -1,4 +1,4 @@
-package org.mineejo.avi.settings
+package com.github.mineejo.avi.settings
 
 import com.intellij.ui.components.JBLabel
 import com.intellij.util.ui.FormBuilder

@@ -1,4 +1,4 @@
-package org.mineejo.avi.settings
+package com.github.mineejo.avi.settings
 
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.State
