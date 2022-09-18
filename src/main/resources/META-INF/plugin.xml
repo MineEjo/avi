@@ -33,4 +33,16 @@
       displayName="Adaptive Visual Interaction"
       nonDefaultProject="true"/>
   </extensions>
+
+  <!-- !Todo: Rewrite this -->
+  <actions>
+    <action
+      id="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
+      class="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
+      text="Save as AVI"
+      description="Save the selected content as AVI, for further interaction">
+      <override-text place="MainMenu" text="Save as AVI"/>
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
 </idea-plugin>
