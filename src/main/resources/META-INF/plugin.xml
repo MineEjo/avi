@@ -22,8 +22,16 @@
   <!-- Extension points defined by the plugin.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
   <extensions defaultExtensionNs="com.intellij">
+    <projectService serviceImplementation="org.mineejo.avi.settings.ProjectSettingsState"/>
 
+    <projectConfigurable
+      parentId="editor"
+      instance="org.mineejo.avi.settings.ProjectSettingsConfigurable"
+      id="org.mineejo.avi.settings.ProjectSettingsConfigurable"
+      displayName="Adaptive Visual Interaction"
+      nonDefaultProject="true"/>
   </extensions>
+
   <actions>
     <action id="org.mineejo.avi.avi.Main" class="org.mineejo.avi.avi.Main" text="MainDialog"
             description="Main dialog with text"/>
