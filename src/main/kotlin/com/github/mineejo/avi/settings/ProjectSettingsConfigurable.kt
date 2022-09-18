@@ -7,7 +7,8 @@ import javax.swing.JComponent
 
 class ProjectSettingsConfigurable : Configurable {
 
-    private var mySettingsComponent: ProjectSettingsComponent? = null
+    private var component: ProjectSettingsComponent? = null
+    private val displayName: String = "Adaptive Visual Interaction"
 
     // A default constructor with no arguments is required because this implementation
     // is registered as an applicationConfigurable EP
@@ -15,14 +16,12 @@ class ProjectSettingsConfigurable : Configurable {
     // A default constructor with no arguments is required because this implementation
     // is registered as an applicationConfigurable EP
     @Nls(capitalization = Nls.Capitalization.Title)
-    override fun getDisplayName(): String {
-        return "SDK: Application Settings Example"
-    }
+    override fun getDisplayName(): String = displayName
 
     @Nullable
     override fun createComponent(): JComponent? {
-        mySettingsComponent = ProjectSettingsComponent()
-        return mySettingsComponent!!.getPanel()
+        component = ProjectSettingsComponent()
+        return component!!.getPanel()
     }
 
     override fun isModified(): Boolean {
@@ -34,7 +33,7 @@ class ProjectSettingsConfigurable : Configurable {
     override fun reset() {}
 
     override fun disposeUIResources() {
-        mySettingsComponent = null
+        component = null
     }
 
 }
