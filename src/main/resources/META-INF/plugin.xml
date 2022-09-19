@@ -34,13 +34,12 @@
       nonDefaultProject="true"/>
   </extensions>
 
-  <!-- !Todo: Rewrite this -->
   <actions>
     <action
       id="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
       class="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
-      text="Save as AVI"
-      description="Save the selected content as AVI, for further interaction">
+      text="Add Adaptive Visual Interaction (AVI)"
+      icon="AllIcons.Actions.MenuSaveall">
       <add-to-group group-id="EditorPopupMenu" anchor="first"/>
     </action>
   </actions>
