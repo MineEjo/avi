@@ -13,7 +13,7 @@
   <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
        Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-  <description>Avi is an adaptive improvement of visual interaction in a code.</description>
+  <description>Avi is an adaptive improvement of visual interaction in code for the JetBrains IDE.</description>
 
   <!-- Product and plugin compatibility requirements.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -41,8 +41,7 @@
       class="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
       text="Save as AVI"
       description="Save the selected content as AVI, for further interaction">
-      <override-text place="MainMenu" text="Save as AVI"/>
-      <add-to-group group-id="ToolsMenu" anchor="first"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
     </action>
   </actions>
 </idea-plugin>
