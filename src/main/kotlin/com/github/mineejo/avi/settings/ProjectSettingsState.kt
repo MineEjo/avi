@@ -3,7 +3,9 @@ package com.github.mineejo.avi.settings
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
+import com.intellij.openapi.project.Project
 import com.intellij.util.xmlb.XmlSerializerUtil
+import java.io.Serializable
 
 
 /**
@@ -16,9 +18,11 @@ import com.intellij.util.xmlb.XmlSerializerUtil
     storages = [Storage("avi.xml")]
 )
 class ProjectSettingsState : PersistentStateComponent<ProjectSettingsState> {
-//    fun getInstance(): ProjectSettingsState? {
-//        return ProjectManager.getInstance().defaultProject.getService(ProjectSettingsState::class.java)
-//    }
+    var dots: List<Serializable> = listOf()
+
+    fun getInstance(project: Project): ProjectSettingsState {
+        return project.getService(ProjectSettingsState::class.java)
+    }
 
     override fun getState(): ProjectSettingsState {
         return this
