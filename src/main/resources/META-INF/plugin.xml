@@ -35,6 +35,7 @@
   </extensions>
 
   <actions>
+    <!-- !Todo: Added writing points via a keyboard shortcut. -->
     <action
       id="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
       class="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
