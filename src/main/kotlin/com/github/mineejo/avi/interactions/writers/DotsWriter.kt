@@ -34,7 +34,7 @@ class DotsWriter(e: AnActionEvent) {
         // ID is not unique and is compiled from data, if ID is the same = duplicate
         if (settings.dots.contains(id)) return
 
-        settings.dots = settings.dots + arrayOf(id, fileName, arrayOf(start, end), text)
+        settings.dots = settings.dots + arrayOf(id, fileName, "$start:$end", text)
 
         primaryCaret.removeSelection()
     }
