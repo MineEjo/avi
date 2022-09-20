@@ -24,7 +24,7 @@ class DotWriter(e: AnActionEvent) {
     private val start: Int = primaryCaret.selectionStart
     private val end: Int = primaryCaret.selectionEnd
 
-    fun saveDots() {
+    fun saveDot() {
         if (primaryCaret.selectedText == null) return Messages.showErrorDialog(noSelectedText, titleWindow)
         if (fileName == null) return Messages.showErrorDialog(noFileName, titleWindow)
 

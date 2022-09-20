@@ -19,5 +19,5 @@ class SaveSelectCode : AnAction() {
         e.presentation.isEnabledAndVisible = project != null && editor != null && editor.selectionModel.hasSelection()
     }
 
-    override fun actionPerformed(e: AnActionEvent) = DotWriter(e).saveDots()
+    override fun actionPerformed(e: AnActionEvent) = DotWriter(e).saveDot()
 }
