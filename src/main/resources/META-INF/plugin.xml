@@ -35,13 +35,23 @@
   </extensions>
 
   <actions>
-    <!-- !Todo: Added writing points via a keyboard shortcut. -->
     <action
       id="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
       class="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
       text="Add Adaptive Visual Interaction (AVI)"
       icon="AllIcons.Actions.MenuSaveall">
       <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+
+    <action
+      id="com.github.mineejo.avi.interactions.KeyboardShortcutSelectCode"
+      class="com.github.mineejo.avi.interactions.KeyboardShortcutSelectCode"
+      text="Add Adaptive Visual Interaction (AVI)"
+      icon="AllIcons.Actions.MenuSaveall">
+      <keyboard-shortcut
+        keymap="$default"
+        first-keystroke="control alt A"
+        second-keystroke="S"/>
     </action>
   </actions>
 </idea-plugin>
