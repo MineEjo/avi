@@ -9,7 +9,7 @@ import com.intellij.openapi.project.Project
 import org.jetbrains.annotations.NotNull
 
 
-class ContextMenuSelectCode : AnAction() {
+class SaveSelectCode : AnAction() {
     override fun update(@NotNull e: AnActionEvent) {
         val project: Project? = e.project
         val editor: Editor? = e.getData(CommonDataKeys.EDITOR)

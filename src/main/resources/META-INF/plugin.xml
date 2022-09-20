@@ -36,22 +36,15 @@
 
   <actions>
     <action
-      id="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
-      class="com.github.mineejo.avi.interactions.ContextMenuSelectCode"
-      text="Add Adaptive Visual Interaction (AVI)"
-      icon="AllIcons.Actions.MenuSaveall">
-      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-    </action>
-
-    <action
-      id="com.github.mineejo.avi.interactions.KeyboardShortcutSelectCode"
-      class="com.github.mineejo.avi.interactions.KeyboardShortcutSelectCode"
+      id="com.github.mineejo.avi.interactions.SaveSelectCode"
+      class="com.github.mineejo.avi.interactions.SaveSelectCode"
       text="Add Adaptive Visual Interaction (AVI)"
       icon="AllIcons.Actions.MenuSaveall">
       <keyboard-shortcut
         keymap="$default"
         first-keystroke="control alt A"
         second-keystroke="S"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
     </action>
   </actions>
 </idea-plugin>
