@@ -11,7 +11,7 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.Messages
 
-class DotsWriter(e: AnActionEvent) {
+class DotWriter(e: AnActionEvent) {
     private val titleWindow: String = "Adaptive Visual Interaction (AVI)"
     private val noSelectedText: String = "An invalid code area is selected!"
     private val noFileName = "Unable to define the file and save the selection!"

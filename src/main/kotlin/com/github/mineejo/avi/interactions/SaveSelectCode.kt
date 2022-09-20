@@ -1,6 +1,6 @@
 package com.github.mineejo.avi.interactions
 
-import com.github.mineejo.avi.interactions.writers.DotsWriter
+import com.github.mineejo.avi.interactions.writers.DotWriter
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -19,5 +19,5 @@ class SaveSelectCode : AnAction() {
         e.presentation.isEnabledAndVisible = project != null && editor != null && editor.selectionModel.hasSelection()
     }
 
-    override fun actionPerformed(e: AnActionEvent) = DotsWriter(e).saveDots()
+    override fun actionPerformed(e: AnActionEvent) = DotWriter(e).saveDots()
 }
