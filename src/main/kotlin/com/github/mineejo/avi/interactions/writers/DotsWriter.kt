@@ -1,5 +1,7 @@
 package com.github.mineejo.avi.interactions.writers
 
+import com.github.mineejo.avi.enums.Dot
+import com.github.mineejo.avi.enums.DotLine
 import com.github.mineejo.avi.settings.ProjectSettingsState
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -34,7 +36,12 @@ class DotsWriter(e: AnActionEvent) {
         // ID is not unique and is compiled from data, if ID is the same = duplicate
         if (settings.dots.contains(id)) return
 
-        settings.dots = settings.dots + arrayOf(id, fileName, "$start:$end", text)
+        settings.dots = settings.dots + arrayOf(
+            "${Dot.ID.content}$id",
+            "${Dot.FILE.content}$fileName",
+            "${Dot.LINES.content}$start${DotLine.SEPARATOR.content}$end",
+            "${Dot.CONTENT.content}${text.trim()}"
+        )
 
         primaryCaret.removeSelection()
     }
