@@ -1,6 +1,6 @@
 package com.github.mineejo.avi.interactions
 
-import com.github.mineejo.avi.interactions.writers.DotWriter
+import com.github.mineejo.avi.interactions.writers.VisualAreaWriter
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -9,7 +9,7 @@ import com.intellij.openapi.project.Project
 import org.jetbrains.annotations.NotNull
 
 
-class SaveSelectCode : AnAction() {
+class SaveSelectArea : AnAction() {
     override fun update(@NotNull e: AnActionEvent) {
         val project: Project? = e.project
         val editor: Editor? = e.getData(CommonDataKeys.EDITOR)
@@ -19,5 +19,5 @@ class SaveSelectCode : AnAction() {
         e.presentation.isEnabledAndVisible = project != null && editor != null && editor.selectionModel.hasSelection()
     }
 
-    override fun actionPerformed(e: AnActionEvent) = DotWriter(e).saveDot()
+    override fun actionPerformed(e: AnActionEvent) = VisualAreaWriter(e).add()
 }

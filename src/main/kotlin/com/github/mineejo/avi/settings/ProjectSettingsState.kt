@@ -18,7 +18,7 @@ import java.io.Serializable
     storages = [Storage("avi.xml")]
 )
 class ProjectSettingsState : PersistentStateComponent<ProjectSettingsState> {
-    var dots: List<Serializable> = listOf()
+    var areas: List<Serializable> = listOf()
 
     fun getInstance(project: Project): ProjectSettingsState {
         return project.getService(ProjectSettingsState::class.java)
