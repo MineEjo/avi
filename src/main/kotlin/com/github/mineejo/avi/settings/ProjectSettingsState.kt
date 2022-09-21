@@ -5,7 +5,6 @@ import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
 import com.intellij.openapi.project.Project
 import com.intellij.util.xmlb.XmlSerializerUtil
-import java.io.Serializable
 
 
 /**
@@ -18,7 +17,7 @@ import java.io.Serializable
     storages = [Storage("avi.xml")]
 )
 class ProjectSettingsState : PersistentStateComponent<ProjectSettingsState> {
-    var areas: List<Serializable> = listOf()
+    var areas: MutableList<String> = mutableListOf()
 
     fun getInstance(project: Project): ProjectSettingsState {
         return project.getService(ProjectSettingsState::class.java)

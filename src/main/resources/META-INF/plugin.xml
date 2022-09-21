@@ -36,8 +36,8 @@
 
   <actions>
     <action
-      id="com.github.mineejo.avi.interactions.SaveSelectArea"
-      class="com.github.mineejo.avi.interactions.SaveSelectArea"
+      id="com.github.mineejo.avi.interactions.SaveSelectedArea"
+      class="com.github.mineejo.avi.interactions.SaveSelectedArea"
       text="Add Adaptive Visual Interaction (AVI)"
       icon="AllIcons.Actions.MenuSaveall">
       <keyboard-shortcut
