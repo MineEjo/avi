@@ -6,7 +6,6 @@ import org.jetbrains.annotations.Nullable
 import javax.swing.JComponent
 
 class ProjectSettingsConfigurable : Configurable {
-
     private var component: ProjectSettingsComponent? = null
     private val displayName: String = "Adaptive Visual Interaction"
 
@@ -35,5 +34,4 @@ class ProjectSettingsConfigurable : Configurable {
     override fun disposeUIResources() {
         component = null
     }
-
 }
