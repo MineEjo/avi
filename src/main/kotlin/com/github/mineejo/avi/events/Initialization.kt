@@ -5,9 +5,9 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.changes.shelf.ShelveChangesManager.PostStartupActivity
 
 class Initialization : PostStartupActivity() {
-    override fun runActivity(project: Project) {
-        println("Plugin loaded after the project :D")
+	override fun runActivity(project: Project) {
+		println("Plugin loaded after the project :D")
 
-        VisualAreasChecker().validate(project)
-    }
+		VisualAreasChecker().validate(project)
+	}
 }

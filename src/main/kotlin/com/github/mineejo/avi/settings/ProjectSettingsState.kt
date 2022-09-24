@@ -13,21 +13,21 @@ import com.intellij.util.xmlb.XmlSerializerUtil
  * these persistent application settings are stored.
  */
 @State(
-    name = "org.mineejo.avi.settings.ProjectSettingsState",
-    storages = [Storage("avi.xml")]
+	name = "org.mineejo.avi.settings.ProjectSettingsState",
+	storages = [Storage("avi.xml")]
 )
 class ProjectSettingsState : PersistentStateComponent<ProjectSettingsState> {
-    var areas: MutableList<String> = mutableListOf()
+	var areas: MutableList<String> = mutableListOf()
 
-    fun getInstance(project: Project): ProjectSettingsState {
-        return project.getService(ProjectSettingsState::class.java)
-    }
+	fun getInstance(project: Project): ProjectSettingsState {
+		return project.getService(ProjectSettingsState::class.java)
+	}
 
-    override fun getState(): ProjectSettingsState {
-        return this
-    }
+	override fun getState(): ProjectSettingsState {
+		return this
+	}
 
-    override fun loadState(state: ProjectSettingsState) {
-        XmlSerializerUtil.copyBean(state, this)
-    }
+	override fun loadState(state: ProjectSettingsState) {
+		XmlSerializerUtil.copyBean(state, this)
+	}
 }
