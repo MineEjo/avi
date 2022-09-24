@@ -1,6 +1,6 @@
 package com.github.mineejo.avi.interactions
 
-import com.github.mineejo.avi.area.VisualAreaWriter
+import com.github.mineejo.avi.area.VisualAreasWriter
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -19,5 +19,5 @@ class SaveSelectedArea : AnAction() {
         e.presentation.isEnabledAndVisible = project != null && editor != null && editor.selectionModel.hasSelection()
     }
 
-    override fun actionPerformed(e: AnActionEvent) = VisualAreaWriter().add(e)
+    override fun actionPerformed(e: AnActionEvent) = VisualAreasWriter().add(e)
 }
