@@ -9,7 +9,7 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.Messages
 
-class VisualAreaController : VisualArea() {
+class VisualAreaController : VisualAreaFields() {
 	private val areaFileIndex: Int = 1
 	private val areaLinesIndex: Int = 2
 	private val areaContentIndex: Int = 3
