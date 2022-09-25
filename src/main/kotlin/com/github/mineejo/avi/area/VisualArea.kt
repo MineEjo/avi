@@ -5,7 +5,7 @@ open class VisualArea(
 	areaFile: String,
 	private val areaLines: String,
 	areaContent: String
-) : VisualAreaFields() {
+) : VisualAreaComponent() {
 
 	private fun processLines(): IntRange {
 		val lines: String = areaLines.replace(keyLines, "")

@@ -9,10 +9,7 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.Messages
 
-class VisualAreaController : VisualAreaFields() {
-	private val areaFileIndex: Int = 1
-	private val areaLinesIndex: Int = 2
-	private val areaContentIndex: Int = 3
+class VisualAreaController : VisualAreaComponent() {
 	private val titleWindow: String = "Adaptive Visual Interaction (AVI)"
 	private val noSelectedText: String = "An invalid code area is selected!"
 	private val noFileName = "Unable to define the file and save the selection!"
@@ -62,23 +59,11 @@ class VisualAreaController : VisualAreaFields() {
 		}
 
 		// Collects uncorrupted areas
-		for ((index, areaId) in settings.areas.withIndex()) {
-			if (!areaId.startsWith(keyContent)) continue
-
-			val areaFile = settings.areas.getOrNull(index + areaFileIndex) ?: ""
-			val areaLines = settings.areas.getOrNull(index + areaLinesIndex) ?: ""
-			val areaContent = settings.areas.getOrNull(index + areaContentIndex) ?: ""
-
-			when {
-				(!areaFile.startsWith(keyFile)) -> continue
-				(!areaLines.startsWith(keyLines)) -> continue
-				(!areaContent.startsWith(keyContent)) -> continue
-			}
-
-			areas.add(areaId)
-			areas.add(areaFile)
-			areas.add(areaLines)
-			areas.add(areaContent)
+		forEach(settings.areas) { id, file, lines, content ->
+			areas.add(id)
+			areas.add(file)
+			areas.add(lines)
+			areas.add(content)
 		}
 
 		if (settings.areas != areas) settings.areas = areas
